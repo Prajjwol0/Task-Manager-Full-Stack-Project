@@ -29,6 +29,3 @@ This is a Task Manager application built using the MERN stack (MongoDB, Express,
 - The app is mainly for **practice and learning purposes**.
 
 
-
-```bash
-git clone <your-repo-url>
