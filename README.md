@@ -1,31 +1,56 @@
-# Task Manager App (MERN Stack)
+# Task Manager Full-Stack Project
 
-> **Note:** This project is for personal practice and learning purposes. It is **not yet complete**.
+> ⚠️ This project is for **personal practice** and **not yet complete**.
 
-## Overview
+## Project Overview
 
-This is a Task Manager application built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to sign up, log in, and manage their tasks. Each user can see only their own tasks after logging in.
+This is a full-stack Task Manager application built with the MERN stack (MongoDB, Express.js, React + Vite, Node.js).  
+Users can sign up, log in, and manage tasks. Each logged-in user should see only their own tasks.
 
-## Features (Implemented)
+## Current Features
 
-- User signup and login with JWT authentication
-- Create, read, update, and delete tasks (CRUD)
-- Display tasks in the frontend using React
-- Filter tasks by user (so each user sees only their tasks)
-- Sign out functionality
+- User Signup & Login using JWT tokens  
+- Create, Read, Update, Delete (CRUD) tasks  
+- Frontend fetches tasks from backend (`/getTasks`)  
+- Basic layout using React components  
+- Token storage in `localStorage`  
+- Sign Out button to log out users
 
-## Technologies Used
+## Tech Stack
 
-- **Frontend:** React, React Router, Tailwind CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB (Mongoose ODM)
-- **Authentication:** JWT (JSON Web Tokens)
-- **API Requests:** Axios
+- **Frontend**: React, Vite, Axios  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB (via Mongoose)  
+- **Authentication**: JSON Web Tokens (JWT)  
+- **API requests**: Axios / custom `api` instance  
 
-## Project Status
+## Getting Started
 
-- This project is still in development.
-- Some features, like task filtering, editing, or advanced UI, are not fully completed.
-- The app is mainly for **practice and learning purposes**.
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Prajjwol0/Task-Manager-Full-Stack-Project.git
+   cd Task-Manager-Full-Stack-Project
+2. Backend setup:
+   cd backend
+npm install
 
+Create a .env file with:
+PORT=4000
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<your-jwt-secret>
 
+3. Frontend setup:
+   cd ../frontend
+   npm install
+   npm run dev
+
+4. Run the full stack:
+   Start backend: npm run dev
+   Start frontend (in separate terminal): npm run dev
+   Open your browser at http://localhost:5173 (or the port Vite uses)
+
+## Usage
+   On the browser, signup for a new user or login with existing credentials
+   After logging in, you should be redirected to the Home page and see your task list
+   Use the “Sign Out” button to log out
+   Note: Tasks should belong to the logged-in user only — but that feature is being refined
